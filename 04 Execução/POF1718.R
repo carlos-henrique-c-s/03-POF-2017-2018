@@ -699,7 +699,7 @@ rm(Aluguel, Cad_coletiva, Desp_coletiva, Desp_individual, Outros_rend, Rend)
 ### Relacionamento do tradutor de POF-SCN com as despesas por produtos (3.3)
 
 tradutor_pof_scn <-
-  readxl::read_excel("C:/Users/chenr/OneDrive/IMESC/ARTIGOS/03 Efeito de uma renda básica na economia do maranhão medido pela matriz de insumo/03 Bases de dados/02 POF 2017-2018/Tradutores_20230713/Tradudor_POF2018_SCN.xlsx") %>% 
+  readxl::read_excel("...") %>% 
   mutate(`CÓDIGO POF1718` = as.integer(`CÓDIGO POF1718`))
 
 Despesas = left_join(Despesas, tradutor_pof_scn, by = c("V9001" = "CÓDIGO POF1718"))
@@ -1379,7 +1379,7 @@ Tab1_POF = data.frame(temp,
                                       digits = 2))
 
 write.xlsx(Tab1_POF,
-           file = "C:/Users/chenr/OneDrive/UFC/QUALIFICAÇÃO - ARTIGO/05 Produto/Tabela 1 POF.xlsx")
+           file = "...")
 
 # Resultado por atividade SCN e decil
 
@@ -1390,20 +1390,18 @@ Tab2_POF = base_trab %>%
 Tab2_POF = pivot_wider(Tab2_POF, names_from = D_RFBPC, values_from = Desp_T)
 
 write.xlsx(Tab2_POF,
-           file = "C:/Users/chenr/OneDrive/UFC/QUALIFICAÇÃO - ARTIGO/05 Produto/Tabela 2 POF.xlsx")
-
-
+           file = "...")
 
 
 ###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-### TESTANDO GERACAO DE RESULTADOS (3)
+### TESTANDO GERACAO DE RESULTADOS (5)
 ###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ## Relacionamento do tradutor de despesas com as despesas por produtos (3.1)
 # Este passo e efetuado para checagem com os resultados da tebela de despesa
 # divulgada pelo IBGE (Tab 6715 - SIDRA)
 
 tradutor_despesa <-
-  readxl::read_excel("C:/Users/chenr/OneDrive/IMESC/ARTIGOS/03 Efeito de uma renda básica na economia do maranhão medido pela matriz de insumo/03 Bases de dados/02 POF 2017-2018/Tradutores_20230713/Tradutor_Despesa_Geral.xls") 
+  readxl::read_excel("...") 
 
 Despesas = left_join(Despesas, tradutor_despesa, by = c("PROD_5D" = "Codigo"))
 
@@ -1435,7 +1433,7 @@ Despesas %>%
 
 
 ###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-### GERACAO DE RESULTADOS DO INVENTARIO (4)
+### GERACAO DE RESULTADOS DO INVENTARIO (5)
 ###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # Servira de base aqui, os microdados do caderno 'inventario' que fornece a re
@@ -1487,15 +1485,16 @@ rm(Domicilio, Inventario)
 ## Relacionamento do tradutor de produtos com inventario (4.3)
 
 tradutor_prods <-
-  readxl::read_excel("C:/Users/chenr/OneDrive/IMESC/ARTIGOS/03 Efeito de uma renda básica na economia do maranhão medido pela matriz de insumo/03 Bases de dados/Documentacao_20230713/Cadastro de Produtos.xls") 
+  readxl::read_excel("...") 
 
 Inventario = left_join(Bens_Dom, 
                        tradutor_prods, 
                        by = c("Produtos" = "CÓDIGO DO PRODUTO"))
 
 openxlsx::write.xlsx(x = Inventario,
-                     file = "C:/Users/chenr/OneDrive/PROJETO ENERGIA SOLAR/INVENÁRIO_MA.xlsx")
+                     file = "...")
 
 
-
-
+###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+###
+###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
