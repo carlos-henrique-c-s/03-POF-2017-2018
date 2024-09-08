@@ -41,3 +41,8 @@ Os seguintes direcionamentos contêm os arquivos necessários para a execução 
 * [Programas de leitura](https://ftp.ibge.gov.br/Orcamentos_Familiares/Pesquisa_de_Orcamentos_Familiares_2017_2018/Microdados/Tradutores_20230713.zip);
 * [Memória de cálculo](https://ftp.ibge.gov.br/Orcamentos_Familiares/Pesquisa_de_Orcamentos_Familiares_2017_2018/Microdados/Memoria_de_Calculo_20230929.zip);
 * [Leia-me](https://ftp.ibge.gov.br/Orcamentos_Familiares/Pesquisa_de_Orcamentos_Familiares_2017_2018/Microdados/Leiame_Microdados_POF2017_2018_20231006.pdf).
+
+# INFORMAÇÕES ADICIONAIS
+
+1. Na pasta base de dados é fornecido um tradutor que relaciona os produtos da POF com as atividades econômicas acompanhadas pelo Sistema de Contas Nacionais (SCN) do Brasil - referência 2010;
+2. O processo de manipulação dos microdados da POF é feito de forma automatizada, requisitando os dados diretamente do site do IBGE, podendo assim, haver algum evento inesperado.
